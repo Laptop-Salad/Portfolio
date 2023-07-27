@@ -1,0 +1,146 @@
+/* * Projects * */
+#projects {
+    flex: 1;
+    height: auto;
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 1fr;
+    gap: 40px;
+}
+
+#projects > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#projects > section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2% 0;
+}
+
+#projects > section img {
+    width: 80%;
+    margin: 2% 0;
+    border-radius: 5px;
+}
+
+#projects > section .bio {
+    text-align: center;
+    margin: 4%;
+}
+
+/* Project Links */
+#projects .project-links {
+    width: 100%;
+}
+
+#projects .project-links a {
+    display: block;
+    color: dodgerblue;
+    font-size: 1rem;
+    margin: 2% 4%;
+}
+
+#projects .project-links a:focus {
+    color: black;
+}
+
+/* Project Skills */
+#projects .skills {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+#projects .skills p {
+    display: inline-block;
+    margin: 4% 0 4% 4%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    height: 20px;
+}
+
+#projects .open-source {
+    display: block;
+    padding: 4%;
+}
+
+#projects .open-source h4 {
+    font-size: 1.5rem;
+}
+
+#projects .open-source h5 {
+    font-size: 1.2rem;
+    margin: 7% 0 0 0;
+}
+
+#projects .open-source a {
+    color: dodgerblue;
+    font-size: 1rem;
+}
+
+#projects .os-project {
+    display: block;
+    margin: 2% 0 0 0;
+}
+
+#projects .open-source a:hover {
+    color: black;
+}
+
+/* Grid organization */
+
+#projects .project-long {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+#projects .project-small-top {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+#projects .project-small-bottom {
+    grid-column: 2;
+    grid-row: 3 / 5;
+}
+
+#projects .open-source {
+    grid-column: 1;
+    grid-row: 3 / 5;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    #main {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #title {
+        text-align: center;
+    }
+
+    #title p {
+        margin: 5%;
+    }
+
+    #about {
+        height: 75vh;
+    }
+
+    #about p {
+        margin: 5% 0;
+    }
+
+    #references .ref {
+        display: block;
+        margin: 0
+    }
+}
