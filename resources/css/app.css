@@ -11,5 +11,9 @@ h1, h2 {
 }
 
 h1:hover, h2:hover {
-    text-shadow: 6px 6px 0px #A1DD70;
+    text-shadow: 6px 6px 0px #55AA00;
+}
+
+.background-transition {
+    transition: background-color 0.5s;
 }

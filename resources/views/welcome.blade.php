@@ -24,12 +24,19 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased min-h-screen w-full bg-off-white">
+    <body
+        class="font-sans antialiased min-h-screen w-full bg-my-red"
+        x-data="{ focus : false }">
 
-        <div class="h-screen w-full flex flex-col justify-center bg-off-white p-10">
-            <h1 class="cursor-pointer font-bold text-4xl md:text-9xl text-my-red">Amanda Wallis</h1>
+        <div class="background-transition h-screen w-full flex flex-col md:items-start items-center justify-center p-10 md:p-20"
+             :class="{ 'bg-my-red': focus, 'bg-off-white': !focus }">
 
-            <p class="mt-4">I create websites.</p>
+            <h1 class="cursor-pointer font-bold text-5xl md:text-9xl"
+                :class="{ 'text-off-white': focus, 'text-my-red': !focus }">
+                Amanda Wallis
+            </h1>
+
+            <p class="mt-4" :class="{ 'text-black': !focus, 'text-off-white': focus }">I create websites.</p>
 
             <div class="flex items-center space-x-2 mt-4">
                 <x-link href="https://www.linkedin.com/in/amanda-wallis-b92307261/">LinkedIn</x-link>
@@ -37,8 +44,9 @@
             </div>
         </div>
 
-    <div class="flex flex-col items-center space-y-10 p-10 md:px-40 min-h-screen">
-        <div class="grid md:grid-cols-3 gap-16">
+    <div class="background-transition flex flex-col items-center space-y-10 p-10 md:p-20 min-h-screen rounded-b-3xl"
+         :class="{ 'bg-off-white': !focus }">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
            <x-frendnary />
 
             <x-asms />
@@ -46,6 +54,15 @@
             <x-wb />
 
             <x-schoolscanner />
+        </div>
+    </div>
+
+    <div class="min-h-screen p-10 md:p-20 text-off-white space-y-4">
+        <p class="font-bold text-4xl md:text-9xl">Let's chat!</p>
+        <p class="text-lg font-semibold">I am open to discussing ideas for collaboration, answer any questions or to simply talk.</p>
+
+        <div class="md:flex">
+            <x-link>LinkedIn</x-link>
         </div>
     </div>
     </body>

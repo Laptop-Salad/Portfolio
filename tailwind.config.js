@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
         colors : {
-            "off-white" : "#F9EFDB",
-            "my-red" : '#EE4E4E',
-            "my-green": '#A1DD70',
+            "off-white" : "#ffffdb",
+            "my-red" : '#aa0000',
+            "my-green": '#55AA00',
         }
     },
   },
