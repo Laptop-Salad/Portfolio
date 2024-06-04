@@ -46,7 +46,7 @@
 
     <div class="background-transition flex flex-col items-center space-y-10 p-10 md:p-20 min-h-screen rounded-b-3xl"
          :class="{ 'bg-off-white': !focus }">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <div class="grid md:grid-cols-2 gap-16">
            <x-frendnary />
 
             <x-asms />

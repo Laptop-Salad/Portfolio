@@ -5,12 +5,12 @@
 {{--        <x-button>HTML</x-button>--}}
 {{--    </div>--}}
 
-    <div class="relative">
+    <div class="relative h-full">
         <img
             :class="{'opacity-10' : focus && !cards}"
             @mouseover="cards = true; focus = true"
             @mouseleave="cards = false; focus = false"
-            class="cursor-pointer some-shadow rounded-md border-2 border-black"
+            class="cursor-pointer some-shadow rounded-md h-full drop-shadow-md border-2 border-black"
             @click="modalOpen = true"
             src="{{$src}}"
             alt="{{$title}} modal">
@@ -18,11 +18,11 @@
         <div
             x-transition.duration.200ms
             x-show="cards"
-            class="absolute right-[-10px] h-[102%] top-2 -z-10 bg-my-red border-2 w-full rounded-md border-black pb-2 pr-2"></div>
+            class="absolute right-[-10px] h-[102%] top-2 -z-10 bg-my-red w-full rounded-md border-2 border-black pb-2 pr-2"></div>
         <div
             x-transition.duration.400ms
             x-show="cards"
-            class="absolute right-[-20px] h-[104%] top-4 -z-20 bg-my-green border-2 w-full rounded-md border-black pb-2 pr-2"></div>
+            class="absolute right-[-20px] h-[104%] top-4 -z-20 bg-my-green w-full rounded-md border-2 border-black pb-2 pr-2"></div>
     </div>
 
     <div x-show="modalOpen" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
