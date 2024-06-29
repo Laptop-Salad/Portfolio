@@ -1,6 +1,6 @@
 @props(['inverse' => false])
 
-<div class="relative z-50" x-data="{cards : false}">
+<div class="relative z-10" x-data="{cards : false}">
     <a
         @mouseover="cards = true"
         @mouseleave="cards = false"

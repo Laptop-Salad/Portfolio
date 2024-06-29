@@ -1,4 +1,13 @@
 <x-modal src="assets/asms.png" title="Academic Score Management System (ASMS)">
+    <x-slot:card>
+        <img src="assets/asms-dash.png" alt="Dashboard" class="h-full border-2 border-black w-full rounded-md">
+        <p class="my-2 text-off-white">
+            Academic Score Management System is a website that allows you to manage students and
+            staff records. It has an API which allows you to manage student records and generate custom reports which
+            can be viewed on the website.
+        </p>
+    </x-slot:card>
+
     <div class="mt-4 space-x-2 space-y-2">
         <div class="flex space-x-2 justify-center">
             <x-link href="https://github.com/Laptop-Salad/ASMS">Source</x-link>

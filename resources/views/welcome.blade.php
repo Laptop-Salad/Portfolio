@@ -31,12 +31,12 @@
         <div class="background-transition h-screen w-full flex flex-col md:items-start items-center justify-center p-10 md:p-20"
              :class="{ 'bg-my-red': focus, 'bg-off-white': !focus }">
 
-            <h1 class="cursor-pointer font-bold text-5xl md:text-9xl"
+            <h1 class="text-center cursor-pointer font-bold text-6xl md:text-9xl"
                 :class="{ 'text-off-white': focus, 'text-my-red': !focus }">
                 Amanda Wallis
             </h1>
 
-            <p class="mt-4" :class="{ 'text-black': !focus, 'text-off-white': focus }">I create websites.</p>
+            <p class="text-center text-xl mt-4" :class="{ 'text-black': !focus, 'text-off-white': focus }">I create websites.</p>
 
             <div class="flex items-center space-x-2 mt-4">
                 <x-link href="https://www.linkedin.com/in/amanda-wallis-b92307261/">LinkedIn</x-link>
@@ -46,7 +46,7 @@
 
     <div class="background-transition flex flex-col items-center space-y-10 p-10 md:p-20 min-h-screen rounded-b-3xl"
          :class="{ 'bg-off-white': !focus }">
-        <div class="grid md:grid-cols-2 gap-16">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-16 min-h-screen">
            <x-frendnary />
 
             <x-asms />
@@ -61,8 +61,9 @@
         <p class="font-bold text-4xl md:text-9xl">Let's chat!</p>
         <p class="text-lg font-semibold">I am open to discussing ideas for collaboration, answer any questions or to simply talk.</p>
 
-        <div class="md:flex">
+        <div class="md:flex space-y-4 md:space-y-0 md:space-x-4">
             <x-link>LinkedIn</x-link>
+            <x-link href="https://github.com/Laptop-Salad">GitHub</x-link>
         </div>
     </div>
     </body>

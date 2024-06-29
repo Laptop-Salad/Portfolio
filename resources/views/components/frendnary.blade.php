@@ -1,4 +1,13 @@
-<x-modal src="assets/frendnary.png" title="Frendnary">
+<x-modal src="assets/frendnary/welcome.png" title="Frendnary">
+
+    <x-slot:card>
+        <div>
+            <img src="assets/frendnary/group-with-def.png" alt="Group page" class="h-full border-2 border-black w-full rounded-md">
+
+            <p class="my-2 text-off-white">Frendnary brings the memories and lore of friend groups into their own central and collaborative private dictionary.</p>
+        </div>
+    </x-slot:card>
+
     <div class="mt-4 space-x-2 space-y-4">
         <div class="flex space-x-2 justify-center">
             <x-link href="https://github.com/Laptop-Salad/Frendnary">Source</x-link>
@@ -7,9 +16,9 @@
 
         <div class="px-5 md:px-20 space-y-4">
             <div class="h-1/2 grid md:grid-cols-3 gap-4 my-20">
-                <img src="assets/friend-group.png" alt="Add new friend group page design" class="h-full border-2 border-black w-full rounded-md">
-                <img src="assets/word.png" alt="Add new word page design" class="border-2 border-black h-full w-full rounded-md">
-                <img src="assets/frendnary-login.png" alt="Login page" class="border-2 border-black h-full w-full rounded-md">
+                <img src="assets/frendnary/dashboard.png" alt="User dashboard" class="h-full border-2 border-black w-full rounded-md">
+                <img src="assets/frendnary/group-with-def.png" alt="Group page" class="border-2 border-black h-full w-full rounded-md">
+                <img src="assets/frendnary/add-def.png" alt="Add definition to group" class="border-2 border-black h-full w-full rounded-md">
             </div>
 
             <p>
@@ -20,14 +29,9 @@
             </p>
 
             <p>
-                This project initially was ready to go until I realised that I was not quite taking
-                advantage of the framework (Laravel) that I was using and my life would have been
-                made 100x easier had I done so.
-            </p>
-
-            <p>
-                So the project has been rewritten from scratch and I expect to start development
-                again in July 2024.
+                Currently it allows you to store lore and definitions. You can search, filter and trace back the person that
+                submitted the item. The groups are designed to be collaborative so no one person should be an administrator. This means that
+                a voting system will be implemented for any administrative decisions such as deleting a chat or removing someone from a group.
             </p>
         </div>
     </div>

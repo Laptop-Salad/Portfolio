@@ -6,14 +6,23 @@
 {{--    </div>--}}
 
     <div class="relative h-full">
-        <img
-            :class="{'opacity-10' : focus && !cards}"
+        <div
+            :class="{'opacity-10' : focus && !cards, 'bg-my-green': cards, 'bg-my-red': !cards}"
             @mouseover="cards = true; focus = true"
             @mouseleave="cards = false; focus = false"
-            class="cursor-pointer some-shadow rounded-md h-full drop-shadow-md border-2 border-black"
+            class="p-4 cursor-pointer some-shadow rounded-md w-full h-full drop-shadow-md border-2 border-black"
             @click="modalOpen = true"
-            src="{{$src}}"
-            alt="{{$title}} modal">
+        >
+            <div>
+                <h2 class="font-bold text-2xl text-off-white">{{$title}}</h2>
+
+                @isset($card)
+                    <div class="my-4 h-full">
+                        {{$card}}
+                    </div>
+                @endisset
+            </div>
+        </div>
 
         <div
             x-transition.duration.200ms
