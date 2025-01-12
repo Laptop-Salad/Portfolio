@@ -6,65 +6,71 @@
 
         <title>Amanda Wallis</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
         {{-- Font awesome --}}
         <script src="https://kit.fontawesome.com/c5ef5dbab6.js" crossorigin="anonymous"></script>
 
         {{-- Favicon --}}
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="164x164" href="assets/favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body
-        class="font-sans antialiased min-h-screen w-full bg-my-red"
-        x-data="{ focus : false }">
+    <body class="poppins-regular bg-gray-50 text-gray-950" x-data="{current_screen: 'landing'}">
+        <div class="pattern h-screen">
+            &nbsp;
+        </div>
+        <div class="md:inset-0 md:absolute z-10 flex items-center justify-center min-h-screen">
+            <div class="flex md:flex-row flex-col-reverse">
+                <div class="md:w-[60vw] w-[90vw] bg-white rounded-md border border-black space-y-4 md:min-h-[60vh] min-h-[90vh]">
+                    <x-home />
+                    <x-frendnary />
+                    <x-asms />
+                    <x-capybara_php />
+                    <x-time_investment />
+                </div>
 
-        <div class="background-transition h-screen w-full flex flex-col md:items-start items-center justify-center p-10 md:p-20"
-             :class="{ 'bg-my-red': focus, 'bg-off-white': !focus }">
-
-            <h1 class="text-center cursor-pointer font-bold text-6xl md:text-9xl"
-                :class="{ 'text-off-white': focus, 'text-my-red': !focus }">
-                Amanda Wallis
-            </h1>
-
-            <p class="text-center text-xl mt-4" :class="{ 'text-black': !focus, 'text-off-white': focus }">I create websites.</p>
-
-            <div class="flex items-center space-x-2 mt-4">
-                <x-link href="https://www.linkedin.com/in/amanda-wallis-b92307261/">LinkedIn</x-link>
-                <x-link href="https://github.com/Laptop-Salad">GitHub</x-link>
+                <div class="py-5">
+                    <div class="md:w-64 space-y-4 w-full">
+                        <x-button
+                            @click="current_screen = 'landing'"
+                        >
+                            Home
+                        </x-button>
+                        <x-button
+                            @click="current_screen = 'capybara_php'"
+                            bg="bg-amber-800"
+                        >
+                            CapybaraPHP
+                        </x-button>
+                        <x-button
+                            @click="current_screen = 'time_investment'"
+                            bg="bg-gray-800"
+                        >
+                            Time Investment
+                        </x-button>
+                        <x-button
+                            bg="bg-[#FAEF9B]"
+                            @click="current_screen = 'frendnary'"
+                        >
+                            Frendnary
+                        </x-button>
+                        <x-button
+                            @click="current_screen = 'asms'"
+                            bg="bg-[#194D2E]"
+                        >
+                            ASMS
+                        </x-button>
+                    </div>
+                </div>
             </div>
         </div>
-
-    <div class="background-transition flex flex-col items-center space-y-10 p-10 md:p-20 min-h-screen rounded-b-3xl"
-         :class="{ 'bg-off-white': !focus }">
-        <div class="grid md:grid-cols-2 gap-8 md:gap-16 min-h-screen">
-           <x-frendnary />
-
-            <x-asms />
-
-            <x-wb />
-
-            <x-schoolscanner />
-        </div>
-    </div>
-
-    <div class="min-h-screen p-10 md:p-20 text-off-white space-y-4">
-        <p class="font-bold text-4xl md:text-9xl">Let's chat!</p>
-        <p class="text-lg font-semibold">I am open to discussing ideas for collaboration, answer any questions or to simply talk.</p>
-
-        <div class="md:flex space-y-4 md:space-y-0 md:space-x-4">
-            <x-link>LinkedIn</x-link>
-            <x-link href="https://github.com/Laptop-Salad">GitHub</x-link>
-        </div>
-    </div>
     </body>
 </html>
