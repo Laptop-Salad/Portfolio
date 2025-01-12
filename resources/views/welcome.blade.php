@@ -24,7 +24,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="poppins-regular bg-gray-50 text-gray-950" x-data="{current_screen: 'landing'}">
-        <div class="pattern h-screen">
+        <div class="hidden md:block pattern h-screen">
             &nbsp;
         </div>
         <div class="md:inset-0 md:absolute z-10 flex items-center justify-center min-h-screen">
