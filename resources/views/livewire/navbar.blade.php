@@ -3,9 +3,7 @@
         <p class="font-bold">Amanda Wallis</p>
 
         <nav class="space-x-6">
-            <a href="#about">About me</a>
             <a href="#projects">Projects</a>
-            <a href="#articles">Articles</a>
             <a href="https://www.linkedin.com/in/amanda-wallis-b92307261/">
                 <i class="fa-brands fa-linkedin"></i>
                 <span class="sr-only">Link to my linkedin</span>
@@ -39,9 +37,7 @@
             </div>
 
             <nav class="flex flex-col gap-y-4">
-                <a href="#about" class="text-lg" x-on:click="show = false">About me</a>
                 <a href="#projects" class="text-lg" x-on:click="show = false">Projects</a>
-                <a href="#articles" class="text-lg" x-on:click="show = false">Articles</a>
 
                 <div class="mt-10 space-x-4">
                     <a href="https://www.linkedin.com/in/amanda-wallis-b92307261/">
