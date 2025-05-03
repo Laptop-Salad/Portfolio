@@ -4,6 +4,7 @@
 
         <nav class="space-x-6">
             <a href="#projects">Projects</a>
+            <a href="https://programminglanguagessimplified.substack.com/">Articles</a>
             <a href="https://www.linkedin.com/in/amanda-wallis-b92307261/">
                 <i class="fa-brands fa-linkedin"></i>
                 <span class="sr-only">Link to my linkedin</span>
@@ -38,6 +39,7 @@
 
             <nav class="flex flex-col gap-y-4">
                 <a href="#projects" class="text-lg" x-on:click="show = false">Projects</a>
+                <a href="https://programminglanguagessimplified.substack.com/" x-on:click="show = false">Articles</a>
 
                 <div class="mt-10 space-x-4">
                     <a href="https://www.linkedin.com/in/amanda-wallis-b92307261/">
